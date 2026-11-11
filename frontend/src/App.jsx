@@ -86,9 +86,9 @@ export default function App() {
           <div aria-hidden className="glass pointer-events-none absolute right-0 top-[10%] bottom-[2%] w-[12%] rounded-l-[28px] opacity-60 md:top-[20%] md:bottom-[4%] md:w-[4%]" />
 
           {/* Layer 1: head-top row (empty / caps / hair) + glasses row, with a real gap between */}
-          <motion.div {...rise(0)} className="relative z-10 flex min-h-0 flex-col gap-3.5 md:gap-4" style={{ flex: '18 1 0' }}>
-            {row('headtop', { grow: 64 })}
-            {row('glasses', { grow: 36, fit: 0.66 })}
+          <motion.div {...rise(0)} className="relative z-10 flex min-h-0 flex-col gap-3.5 md:gap-4" style={{ flex: '30 1 0' }}>
+            {row('headtop', { grow: 69 })}
+            {row('glasses', { grow: 36, fit: 0.86 })}
           </motion.div>
           {/* Layer 2: hoodie / t-shirt */}
           <motion.div {...rise(1)} className="relative z-10 flex min-h-0 flex-col" style={{ flex: '33 1 0' }}>
@@ -99,12 +99,12 @@ export default function App() {
             {row('bottom', { anchor: 'top' })}
           </motion.div>
           {/* Layer 4: shoes */}
-          <motion.div {...rise(3)} className="relative z-10 flex min-h-0 flex-col" style={{ flex: '9 1 0' }}>
+          <motion.div {...rise(3)} className="relative z-10 flex min-h-0 flex-col" style={{ flex: '18 1 0' }}>
             {row('shoes')}
           </motion.div>
         </section>
 
-        <div className="mt-3 md:mt-5">
+        <div className="mt-5 md:mt-5">
           <RatingPanel rating={rating} replay={replay} onAnalyze={analyze} t={t} />
         </div>
       </main>

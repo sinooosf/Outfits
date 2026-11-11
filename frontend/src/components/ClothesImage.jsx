@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 
 // Simple stand-in shapes, shown when an image file is missing.
-const CAP = 'h-[62%] w-[70%] rounded-t-full rounded-b-lg'
+const CAP = 'h-[92%] w-[100%] rounded-t-full rounded-b-lg opacity-0 '
 const SHAPES = {
   headtop: CAP,
   cap: CAP,
-  glasses: 'h-[55%] w-[80%] rounded-xl',
+  glasses: 'h-[100%] w-[100%] rounded-xl opacity-0',
   top: 'h-[90%] w-[62%] rounded-3xl',
   bottom: 'h-[94%] w-[42%] rounded-2xl',
-  shoes: 'h-[55%] w-[75%] rounded-full',
+  shoes: 'h-[65%] w-[85%] rounded-full',
 }
 
 export default function ClothesImage({ src, alt, slot, position = 'center' }) {
@@ -30,7 +30,7 @@ export default function ClothesImage({ src, alt, slot, position = 'center' }) {
       draggable={false}
       decoding="async"
       onError={() => setFailed(true)}
-      className="pointer-events-none h-full w-full select-none object-contain"
+      className="pointer-events-none h-full w-full select-none object-contain "
       style={{ objectPosition: position }}
     />
   )

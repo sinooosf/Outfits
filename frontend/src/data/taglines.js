@@ -9,6 +9,7 @@ export const TAGLINES = {
     'Rough Monday energy, any day of the week.',
     'The fashion police are on their way.',
     'Start over. We won’t tell anyone.',
+    'WTF hide youself man this is terbule'
   ],
   '4-5': [
     'Mid. Not bad, not memorable.',
@@ -27,6 +28,7 @@ export const TAGLINES = {
     'Looks like you meant it.',
     'Quietly confident. We see you.',
     'Respectable. The dress code approves.',
+    'Get some money for new outfit'
   ],
   '8-10': [
     'Okay, walking runway now.',
@@ -36,5 +38,6 @@ export const TAGLINES = {
     'Drip check passed. Easily.',
     'Photographers, line up.',
     'Your closet just got promoted.',
+    'Damn !!'
   ],
 }
