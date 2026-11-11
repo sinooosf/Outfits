@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 
 // Simple stand-in shapes, shown when an image file is missing.
+const CAP = 'h-[62%] w-[70%] rounded-t-full rounded-b-lg'
 const SHAPES = {
-  cap: 'h-[62%] w-[70%] rounded-t-full rounded-b-lg',
+  headtop: CAP,
+  cap: CAP,
   glasses: 'h-[55%] w-[80%] rounded-xl',
   top: 'h-[90%] w-[62%] rounded-3xl',
   bottom: 'h-[94%] w-[42%] rounded-2xl',

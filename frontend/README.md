@@ -7,13 +7,22 @@ React (Vite) + Tailwind CSS v4 + Phosphor icons + Framer Motion. No backend.
 
 ## Adding / swapping clothes
 Drop a transparent PNG into `public/clothes/` and add one line to `src/data/clothes.js`.
-Layers: `cap` and `glasses` (together = Layer 1), `top`, `bottom`, `shoes`.
-Each row loops, so it works with any number of items (min 2).
+Rows: `headtop` (caps + hair, `type: 'cap' | 'hair'`), `glasses` (`type: 'glasses'`), `top`, `bottom`, `shoes`.
+`headtop` and `glasses` get an empty item first automatically. Each row loops (min 2 items).
+Tag every item with `color`, `style` and `impact`: the rating reads those.
+
+## Rating
+`src/utils/rateOutfit.js` holds the rules (the numbers at the top are the knobs).
+`src/data/taglines.js` holds the funny lines, 6+ per score range.
 
 ## Structure
-    src/components/Layer.jsx        one carousel row (scroll-snap, faded neighbours, drag, loop)
-    src/components/TopBar.jsx       top icons
-    src/components/RatingPanel.jsx  stage-1 placeholder
-    src/data/clothes.js             items + defaults
-    src/utils/storage.js            safe localStorage helpers
-    src/hooks/useTheme.js           dark / light
+    src/components/Layer.jsx          one carousel row (scroll-snap, faded neighbours, drag, loop)
+    src/components/TopBar.jsx         theme, language menu, stylist, cabinet, account, favorite
+    src/components/RatingPanel.jsx    live rating + Analyze button
+    src/components/Sheet.jsx          bottom sheet used by Analyze / stylist / cabinet / account
+    src/data/clothes.js               items + defaults
+    src/data/taglines.js              taglines per score range
+    src/utils/rateOutfit.js           rule-based rating
+    src/utils/storage.js              safe localStorage helpers
+    src/hooks/                        useTheme, useLang, useOutfits (cabinet), useCountUp
+    src/i18n.js                       EN / FR / AR UI strings
